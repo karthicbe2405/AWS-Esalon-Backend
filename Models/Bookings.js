@@ -1,0 +1,35 @@
+const mongoose=require('mongoose');
+const booking=mongoose.Schema({
+    shopId:{
+        type:String,
+        required:true
+    },
+    userEmail:{
+        type:String,
+        required:true
+    },
+    shopName:{
+        type:String,
+        required:true
+    },
+    date:{
+        type:String,
+        required:true
+    },
+    slotId:{
+        type:String,
+        required:true
+    },
+    time:{
+        type:String,
+        required:true
+    },
+    service:{
+        type:[String]
+    },
+    totalCost:{
+        type:Number,
+        required:true
+    }
+});
+module.exports=Booking=mongoose.model("bookings",booking);
